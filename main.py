@@ -35,7 +35,7 @@ def redirect():
 async def transcript_file(files: List[UploadFile]):
 
     audio_list = import_wavs(file_source_list=files)
-    transcripts =[]
+    transcripts = []
     for audio in audio_list:
         transcripts.append(speech_to_text(model, audio))
 
