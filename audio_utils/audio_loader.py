@@ -1,11 +1,10 @@
-import soundfile as sf
-
+from scipy.io import wavfile
 from typing import List
 from starlette.datastructures import UploadFile
 
 
 def import_wav(file_source: UploadFile):
-    audio, sr = sf.read(file_source.file)
+    sr, audio = wavfile.read(file_source.file)
     return audio
 
 

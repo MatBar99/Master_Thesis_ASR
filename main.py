@@ -4,9 +4,14 @@ from fastapi import FastAPI, UploadFile
 from fastapi.responses import HTMLResponse, JSONResponse
 
 from audio_utils.audio_loader import import_wavs
+from asr_module.ds import init_stt_model, speech_to_text
+
+config_dict = {"model_path": "deepspeech-0.9.3-models.pbmm",
+               "scorer_path": "deepspeech-0.9.3-models.scorer"}
 
 app = FastAPI()
-
+model = init_stt_model(model_path=config_dict["model_path"],
+                       scorer_path=config_dict["scorer_path"])
 
 @app.get("/", response_class=HTMLResponse, tags=["utils"])
 def redirect():
@@ -30,7 +35,12 @@ def redirect():
 async def transcript_file(files: List[UploadFile]):
 
     audio_list = import_wavs(file_source_list=files)
-    transcript = "Sample text tha has been created"
+    transcripts =[]
+    for audio in audio_list:
+        transcripts.append(speech_to_text(model, audio))
 
-    content = {"transcript": transcript}
+    content = {"transcripts": transcripts}
     return JSONResponse(content)
+
+# TODO Implement normalization and resampling, if files have different sampling frequency than 16kHz
+# TODO transcription has poor quality.
