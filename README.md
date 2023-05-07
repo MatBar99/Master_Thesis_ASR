@@ -36,7 +36,7 @@ Endpoint is called `/transcript` and should be loaded from Swagger API.
 
 `uvicorn main:app`
 
-*Go to the address:*
+*Go to the address in your browser:*
 
 `http://127.0.0.1:8000`
 
