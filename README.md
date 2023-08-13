@@ -1,8 +1,6 @@
 # Master_Thesis_ASR
 
-This is a beta version of my Master Thesis project.
-
-Python version: 3.8.10
+This is my Master Thesis project.
 
 # Installation
 Follow these steps to install it on your PC:
