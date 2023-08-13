@@ -23,7 +23,7 @@ https://drive.google.com/file/d/1se1Rqfmoim99sPr3cI-wDLJFwDyadkZB/view?usp=shari
 
 https://drive.google.com/file/d/19pdnu1KPVDZyZvd07xsnuQpFo-72VOPG/view?usp=drive_link
 
-5. Place them in main folder of this repository
+5. Place models in the main folder of this repository
 
 # Usage
 This app is simple FastAPI code, which has only one endpoint that can be used to transcript 
