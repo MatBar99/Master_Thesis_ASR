@@ -6,8 +6,8 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from audio_utils.audio_loader import import_wavs
 from asr_module.ds import init_stt_model, speech_to_text
 
-config_dict = {"model_path": "deepspeech-0.9.3-models.pbmm",
-               "scorer_path": "deepspeech-0.9.3-models.scorer"}
+config_dict = {"model_path": "pl_model.pb",
+               "scorer_path": "norm_opus_final.scorer"}
 # TODO remember that you can use HotWord utils in this model
 app = FastAPI()
 model = init_stt_model(model_path=config_dict["model_path"],
