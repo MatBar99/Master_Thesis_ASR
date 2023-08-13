@@ -16,14 +16,14 @@ Follow these steps to install it on your PC:
 
 
 3. Download acoustic model (called model)
-
-`python -m wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.pbmm`
-
+   
+https://drive.google.com/file/d/1se1Rqfmoim99sPr3cI-wDLJFwDyadkZB/view?usp=sharing
 
 4. Download language model (called scorer) 
 
-`python -m wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.scorer`
+https://drive.google.com/file/d/19pdnu1KPVDZyZvd07xsnuQpFo-72VOPG/view?usp=drive_link
 
+5. Place them in main folder of this repository
 
 # Usage
 This app is simple FastAPI code, which has only one endpoint that can be used to transcript 
@@ -41,6 +41,6 @@ Endpoint is called `/transcript` and should be loaded from Swagger API.
 *Find endpoint `/transcript` and load files you want to transcript*
 
 
-First loading may take some time due to initialization of the model...
+First loading and transcription may take some time due to initialization of the model...
 
 
