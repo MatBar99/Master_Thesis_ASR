@@ -47,3 +47,8 @@ Endpoint is called `/transcript` and should be loaded from Swagger API.
 First loading and transcription may take some time due to initialization of the model...
 
 
+# Acknowledgements
+
+I declare that this research was supported in part by PLGrid Infrastructure.
+
+
