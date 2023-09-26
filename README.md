@@ -49,6 +49,6 @@ First loading and transcription may take some time due to initialization of the 
 
 # Acknowledgements
 
-I declare that this research was supported in part by PLGrid Infrastructure.
+We gratefully acknowledge Polish high-performance computing infrastructure PLGrid (HPC Centers: ACK Cyfronet AGH) for providing computer facilities and support within computational grant no. PLG/2023/016243
 
 
